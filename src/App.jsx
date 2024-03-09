@@ -11,7 +11,6 @@ import { useState } from "react";
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forcast, setForcast] = useState(null);
-  console.log(forcast);
 
   const handleOnSearchChange = async (searchData) => {
     const [lat, lon] = searchData.value.split(" ");

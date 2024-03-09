@@ -39,6 +39,7 @@ const WeatherForcast = ({ data }) => {
                     />
                     <p className="mr-2">{item.weather[0].description}</p>
                   </div>
+
                   <div className="flex items-center mr-4">
                     <label className="mr-4 text-left">{forcastDays[idx]}</label>
                     <label className="text-gray-400">
@@ -46,6 +47,7 @@ const WeatherForcast = ({ data }) => {
                       {Math.round(item.main.temp_max)}°C
                     </label>
                   </div>
+                  
                 </div>
               </AccordionItemButton>
             </AccordionItemHeading>
@@ -57,34 +59,40 @@ const WeatherForcast = ({ data }) => {
                     {item.main.pressure} hPa
                   </label>
                 </div>
+
                 <div className=" flex justify-between mx-4">
                   <label>Humidity</label>
                   <label className="text-gray-600">
                     {item.main.humidity} g.m-3
                   </label>
                 </div>
+
                 <div className="flex justify-between mx-4">
                   <label>Clouds</label>
                   <label className="text-gray-600">
                     {item.clouds.all} Oktas
                   </label>
                 </div>
+
                 <div className="flex justify-between mx-4">
                   <label>Sea level</label>
                   <label className="text-gray-600">
                     {item.main.sea_level} m
                   </label>
                 </div>
+
                 <div className="flex justify-between mx-4">
                   <label>Wind speed</label>
                   <label className="text-gray-600">{item.wind.speed} m/s</label>
                 </div>
+
                 <div className="flex justify-between mx-4">
                   <label>Feels like</label>
                   <label className="text-gray-600">
                     {item.main.feels_like} °C{" "}
                   </label>
                 </div>
+
               </div>
             </AccordionItemPanel>
           </AccordionItem>
